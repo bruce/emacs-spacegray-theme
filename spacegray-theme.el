@@ -33,6 +33,7 @@
 
 ;; Gadzhi Kharkharov deserves most of the credit as the author of the
 ;; original Spacegray color theme on Sublime Text.
+;; The MIT License (MIT) Copyright (c) 2013 Gadzhi Kharkharov
 ;; http://kkga.github.io/spacegray/
 
 ;; Ozan Sener for afternoon-theme, used as the original boilerplate
