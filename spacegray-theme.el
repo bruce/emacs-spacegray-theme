@@ -44,13 +44,16 @@
 
 (deftheme spacegray
   "A Hyperminimal UI Theme for Emacs")
-
+(display-color-cells (selected-frame))
 (let* ((class '((class color) (min-colors 89)))
        (256color (eq (display-color-cells (selected-frame)) 256))
 
-       (background (if 256color "#1c1c1c" "#181a26"))
-       (current-line (if 256color "#121212" "#14151E"))
-       (selection "#103050")
+       (background (if 256color "#20242C" "#20242C"))
+       (current-line (if 256color "#272E35" "#272E35"))
+       (far-background "#15171C")
+       (subtle "#4B4D57")
+       (selection "#FCE27F")
+       (secondary-selection "#3B351F")
        (foreground "#eaeaea")
        (comment "#969896")
        (red "#d54e53")
@@ -135,9 +138,9 @@
    `(mmm-output-submode-face ((,class (:background ,current-line))))
 
    ;; Search
-   `(match ((,class (:foreground ,blue :background ,background :inverse-video t))))
-   `(isearch ((,class (:foreground ,yellow :background ,background :inverse-video t))))
-   `(isearch-lazy-highlight-face ((,class (:foreground ,aqua :background ,background :inverse-video t))))
+   `(match ((,class (:foreground ,selection :background ,current-line :inverse-video nil))))
+   `(isearch ((,class (:foreground ,selection :background ,current-line))))
+   `(isearch-lazy-highlight-face ((,class (:foreground ,selection :background nil :inverse-video nil))))
    `(isearch-fail ((,class (:background ,background :inherit font-lock-warning-face :inverse-video t))))
 
    ;; Anzu
@@ -160,25 +163,25 @@
 
    ;; Emacs interface
    `(cursor ((,class (:background ,orange))))
-   `(fringe ((,class (:background ,current-line))))
-   `(linum ((,class (:background ,current-line :foreground ,green))))
+   `(fringe ((,class (:background ,background))))
+   `(linum ((,class (:background ,background :foreground ,subtle))))
+   `(linum-highlight-face ((,class (:background ,current-line :foreground ,subtle))))
    `(border ((,class (:background ,current-line))))
    `(border-glyph ((,class (nil))))
    `(highlight ((,class (:inverse-video nil :background ,current-line))))
    `(gui-element ((,class (:background ,current-line :foreground ,foreground))))
-   `(mode-line ((,class (:foreground nil :background ,current-line
-                                     :box (:line-width 1 :color ,foreground)
+   `(mode-line ((,class (:foreground ,foreground :background ,far-background
                                      :family "Lucida Grande"))))
-   `(mode-line-buffer-id ((,class (:foreground ,purple :background nil))))
+   `(mode-line-buffer-id ((,class (:foreground ,foreground :background nil))))
    `(mode-line-inactive ((,class (:inherit mode-line
-                                           :foreground ,comment
-                                           :background ,current-line :weight normal
-                                           :box (:line-width 1 :color ,foreground)))))
+                                           :foreground ,subtle
+                                           :background ,far-background :weight normal
+                                           :box nil))))
    `(mode-line-emphasis ((,class (:foreground ,foreground :slant italic))))
    `(mode-line-highlight ((,class (:foreground ,purple :box nil))))
    `(minibuffer-prompt ((,class (:foreground ,blue))))
-   `(region ((,class (:background ,selection))))
-   `(secondary-selection ((,class (:background ,current-line))))
+   `(region ((,class (:background ,selection :foreground ,background))))
+   `(secondary-selection ((,class (:background ,secondary-selection))))
 
    `(header-line ((,class (:inherit mode-line :foreground ,purple :background nil))))
 
