@@ -48,21 +48,21 @@
 (let* ((class '((class color) (min-colors 89)))
        (256color (eq (display-color-cells (selected-frame)) 256))
 
-       (background (if 256color "#20242C" "#20242C"))
-       (current-line (if 256color "#272E35" "#272E35"))
-       (far-background "#15171C")
-       (subtle "#4B4D57")
-       (selection "#FCE27F")
-       (secondary-selection "#3B351F")
-       (foreground "#eaeaea")
-       (comment "#969896")
-       (red "#d54e53")
-       (orange "goldenrod")
-       (yellow "#e7c547")
-       (green "DarkOliveGreen3")
-       (aqua "#70c0b1")
-       (blue "DeepSkyBlue1")
-       (purple "#c397d8"))
+       (background "#232830") ;; sidebar-container
+       (current-line "#343d46") ;; tree-row
+       (far-background "#1c1f26") ;; panel-control
+       (subtle "#a7adba") ;; tree-row-hover-disclosure-button-control
+       (selection "#ebcb8b") ;; tab-control-dirty-tab-close-button
+       (secondary-selection "#bf616a") ;; tab-control-hover-tab-close-button
+       (foreground "#ffffff")
+       (comment "#4f5b67") ;; table-row
+       (red "#bf616a") ;; tab-control-hover-tab-close-button
+       (orange "#DCA432") ;; darker tab-control-dirty-tab-close-butto
+       (yellow "#ebcb8b") ;; tab-control-dirty-tab-close-button
+       (green "#B4EB89") ;; complement tab-control-dirty-tab-close-button
+       (aqua "#89EBCA") ;; lighter complement tab-control-dirty-tab-close-button
+       (blue "#89AAEB") ;; complement tab-control-dirty-tab-close-button
+       (purple "#C189EB")) ;; complement tab-control-dirty-tab-close-button
 
   (custom-theme-set-faces
    'spacegray
@@ -165,7 +165,7 @@
    `(cursor ((,class (:background ,orange))))
    `(fringe ((,class (:background ,background))))
    `(linum ((,class (:background ,background :foreground ,subtle))))
-   `(linum-highlight-face ((,class (:background ,current-line :foreground ,subtle))))
+   `(linum-highlight-face ((,class (:background ,current-line :foreground ,foreground))))
    `(border ((,class (:background ,current-line))))
    `(border-glyph ((,class (nil))))
    `(highlight ((,class (:inverse-video nil :background ,current-line))))
