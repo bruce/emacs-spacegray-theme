@@ -16,7 +16,7 @@ Use `M-x customize-themes` to activate it, or put the following in your Emacs co
 
     (load-theme 'spacegray t)
 
-## Screenshots
+## Screenshot
 
 ![Screenshot](spacegray1.png)
 
