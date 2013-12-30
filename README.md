@@ -27,7 +27,7 @@ Always highlight the current line:
 ```elisp
 (global-hl-line-mode 1)
 ```
-Show line numbers, format with dynamic with spaces on either side:
+Show line numbers, dynamically with spaces on either side:
 
 ```elisp
 (global-linum-mode 1)
@@ -37,6 +37,13 @@ Show line numbers, format with dynamic with spaces on either side:
                      (count-lines (point-min) (point-max)))))
          (linum-format (concat " %" (number-to-string w) "d ")))
     ad-do-it))
+```
+
+You may want to turn off linum for certain modes (this uses
+[linum-off](http://www.emacswiki.org/emacs/linum-off.el)):
+
+```elisp
+(require 'linum-off)
 ```
 
 Highlight the current line number (requires [hlinum](https://code.google.com/p/hlinum-mode/)):
