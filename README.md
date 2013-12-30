@@ -24,12 +24,12 @@ Use `M-x customize-themes` to activate it, or put the following in your Emacs co
 
 Always highlight the current line:
 
-```elisp
+```lisp
 (global-hl-line-mode 1)
 ```
 Show line numbers, dynamically with spaces on either side:
 
-```elisp
+```lisp
 (global-linum-mode 1)
 
 (defadvice linum-update-window (around linum-dynamic activate)
@@ -42,20 +42,20 @@ Show line numbers, dynamically with spaces on either side:
 You may want to turn off linum for certain modes (this uses
 [linum-off](http://www.emacswiki.org/emacs/linum-off.el)):
 
-```elisp
+```lisp
 (require 'linum-off)
 ```
 
 Highlight the current line number (requires [hlinum](https://code.google.com/p/hlinum-mode/)):
 
-```elisp
+```lisp
 (require 'hlinum)
 (hlinum-activate)
 ```
 
 Collapse fringes:
 
-```elisp
+```lisp
 (fringe-mode -1)
 ```
 
