@@ -1,4 +1,4 @@
-;;; spacegray-theme.el --- A Hyperminimal UI Theme for Emacs
+;;; spacegray-theme.el --- A Hyperminimal UI Theme
 
 ;; Copyright (C) 2013 Bruce Williams
 
