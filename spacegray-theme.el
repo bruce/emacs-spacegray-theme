@@ -31,14 +31,15 @@
 
 ;;; Credits:
 
-;; Gadzhi Kharkharov deserves most of the credit as the author of the
-;; original Spacegray color theme on Sublime Text.
+;; Gadzhi Kharkharov deserves most of the credit for color selection
+;; as the author of the original Spacegray color theme for Sublime Text:
 ;; The MIT License (MIT) Copyright (c) 2013 Gadzhi Kharkharov
 ;; http://kkga.github.io/spacegray/
 
-;; Ozan Sener for afternoon-theme, used as the original boilerplate
-;; for this package.
+;; Also thanks to Ozan Sener for afternoon-theme, used as the boilerplate:
 ;; https://github.com/osener/emacs-afternoon-theme/
+;; and Steve Purcell, who wrote color-theme-sanityinc-tomorrow:
+;; https://github.com/purcell/color-theme-sanityinc-tomorrow/
 
 ;;; Code:
 
