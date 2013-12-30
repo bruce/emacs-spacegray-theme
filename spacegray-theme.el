@@ -356,7 +356,7 @@
    `(markdown-url-face ((,class (:inherit link))))
    `(markdown-link-face ((,class (:foreground ,blue :underline t))))
 
-   `(hl-sexp-face ((,class (:background ,current-line))))
+   ;`(hl-sexp-face ((,class (:background ,current-line))))
    `(highlight-symbol-face ((,class (:background ,selection))))
    `(highlight-80+ ((,class (:background ,current-line))))
 

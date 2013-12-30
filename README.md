@@ -20,6 +20,38 @@ Use `M-x customize-themes` to activate it, or put the following in your Emacs co
 
 TODO
 
+## Suggested Configuration
+
+Always highlight the current line:
+
+```elisp
+(global-hl-line-mode 1)
+```
+Show line numbers, format with dynamic with spaces on either side:
+
+```elisp
+(global-linum-mode 1)
+
+(defadvice linum-update-window (around linum-dynamic activate)
+  (let* ((w (length (number-to-string
+                     (count-lines (point-min) (point-max)))))
+         (linum-format (concat " %" (number-to-string w) "d ")))
+    ad-do-it))
+```
+
+Highlight the current line number (requires [hlinum](https://code.google.com/p/hlinum-mode/)):
+
+```elisp
+(require 'hlinum)
+(hlinum-activate)
+```
+
+Collapse fringes:
+
+```elisp
+(fringe-mode -1)
+```
+
 ## Credits
 
 * Gadzhi Kharkharov for the original
@@ -28,3 +60,6 @@ TODO
 * Ozan Sener for
   [afternoon-theme](https://github.com/osener/emacs-afternoon-theme/),
   used as boilerplate for this package.
+* Steve Purcell for
+  [color-theme-sanityinc-tomorrow](https://github.com/purcell/color-theme-sanityinc-tomorrow/),
+  which afternoon-theme was based on.
