@@ -70,3 +70,7 @@ Collapse fringes:
 * Steve Purcell for
   [color-theme-sanityinc-tomorrow](https://github.com/purcell/color-theme-sanityinc-tomorrow/),
   which afternoon-theme was based on.
+  
+## License
+
+See [LICENSE](LICENSE).
